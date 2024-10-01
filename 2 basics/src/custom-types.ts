@@ -1,7 +1,15 @@
+// using enums
+enum ContactStatus {
+    Active = "active",
+    Inactive = "inactive",
+    New = "new"
+}
+
 interface Contact extends Address {
     id: number;
     name: string;
     birthDate?: Date; // making optional by using ?
+    status: ContactStatus;
 }
 
 // Type alias
@@ -25,6 +33,7 @@ let primaryContact: Contact = {
     line2: "d",
     province: "p",
     region: "m",
+    status: ContactStatus.Active
 }
 
 let myAddres: Address = {
