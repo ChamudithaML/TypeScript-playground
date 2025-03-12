@@ -1,8 +1,8 @@
 // using enums
 enum ContactStatus {
-    Active = "active",
+    Active = "active", // if value to right side is not given the value of first name in enum will be 0. you can hover the mouse to see where enum is used
     Inactive = "inactive",
-    New = "new"
+    New = "new",
 }
 
 interface Contact extends Address {
@@ -15,6 +15,9 @@ interface Contact extends Address {
 // Type alias
 // Custom aliases can be given to data types
 type AddressPC = string
+
+// Can give aliases for multiple types
+type MultiType = string | number | Date
 
 interface Address {
     line1: string;
@@ -33,7 +36,7 @@ let primaryContact: Contact = {
     line2: "d",
     province: "p",
     region: "m",
-    status: ContactStatus.Active
+    status: ContactStatus.Active   // hover on Active to see the value. if value is not assigned this will be 0
 }
 
 let myAddres: Address = {
